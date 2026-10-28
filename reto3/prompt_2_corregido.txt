@@ -1,0 +1,29 @@
+Escribe entre 3 y 5 criterios de aceptación para la historia que está dentro de <historia>.
+El momento de cada criterio es pagar desde el celular antes de salir. No escribas criterios de ingreso y no uses el verbo ingresar.
+La salida anterior se equivocó en eso: convirtió el pago en un control de la entrada y, además, impidió pagar al cumplir 14 horas. No repitas ese error.
+
+Formato: solo los criterios, numerados. Cada uno ocupa tres líneas, así:
+Dado ...
+Cuando ...
+Entonces ...
+
+Copia la tarifa tal cual. No inventes otra.
+- Visitante en carro: $3.000 por hora o fracción.
+- Visitante en moto: $1.500 por hora o fracción.
+- Fracción: una hora empezada se cobra completa. 1 hora y 10 minutos son 2 horas.
+- Estudiante y personal: pagan $0. No se les bloquea una salida por no tener pago.
+- El tope de 14 horas no impide cobrar ni pagar. Si la estadía lo supera, el visitante igual puede pagar lo que debe.
+
+Incluye al menos estos cuatro casos: visitante en carro con horas exactas, visitante en moto, estadía con fracción de hora, estudiante o personal con monto cero.
+
+<reglas>
+- Solo ingresan vehículos registrados a un carné vigente.
+- Capacidad: 120 carros y 300 motos.
+- Estudiantes y personal no pagan. Visitantes pagan $3.000 (carro) o $1.500 (moto) por hora o fracción.
+- Un carné solo puede tener un vehículo dentro a la vez.
+- Ningún vehículo puede permanecer más de 14 horas seguidas.
+</reglas>
+
+<historia>
+Como visitante, quiero poder realizar el pago desde mi dispositivo móvil antes de salir del parqueadero, para evitar filas en la portería y agilizar mi salida sin necesidad de esperar a ser atendido manualmente.
+</historia>

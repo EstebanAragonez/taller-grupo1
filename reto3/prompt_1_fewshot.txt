@@ -1,0 +1,10 @@
+Convierte pedidos del equipo de ParqueFET en historias de usuario.
+
+Pedido: "Que el vigilante sepa si un vehículo puede entrar antes de abrir la barrera"
+Historia: Como vigilante de portería, quiero consultar si un vehículo registrado y con carné vigente puede ingresar, para no abrir la barrera cuando el parqueadero está lleno o el carné no permite el ingreso.
+
+Pedido: "Que el sistema avise cuando un vehículo lleve demasiado tiempo adentro"
+Historia: Como operador de ParqueFET, quiero que el sistema señale un vehículo que cumpla 14 horas dentro del parqueadero, para liberar el cupo y contactar al responsable del carné.
+
+Pedido: "Que los visitantes puedan pagar el parqueadero desde el celular antes de salir"
+Historia:

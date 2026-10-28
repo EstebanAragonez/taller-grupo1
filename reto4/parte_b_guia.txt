@@ -1,0 +1,33 @@
+PARTE B · LA INSTRUCCIÓN QUE SE OLVIDA
+Misma mecánica que la práctica 14B de la guía, con una regla propia de ParqueFET.
+Modelo: qwen-demo. Pensamiento apagado. Ventana: num_ctx 512.
+qwen-demo trae num_predict 700 en su Modelfile. Para que cada respuesta pueda
+llegar a las 400 palabras pedidas (si no, la primera respuesta cabe en la ventana
+y la segunda imita el formato aunque la regla ya no esté), en el chat hay que subir
+el tope antes de preguntar:
+
+/set parameter num_predict 1200
+
+=== VERSIÓN A · la regla como mensaje del chat ===
+
+ollama run qwen-demo --think=false
+
+/set parameter num_ctx 512
+/set parameter num_predict 1200
+Regla: empieza SIEMPRE tu respuesta con «VEREDICTO:». ¿Entendido?
+Explica en al menos 400 palabras cómo funciona el ingreso de un vehículo a ParqueFET: carné vigente, cupo de carros y motos, y cobro a visitantes.
+Explica en al menos 400 palabras cómo modelarías en una base de datos relacional los ingresos, las salidas y el cobro por hora o fracción de ParqueFET.
+
+=== VERSIÓN B · la misma regla como system prompt ===
+
+/clear
+/set parameter num_ctx 512
+/set parameter num_predict 1200
+/set system Empieza SIEMPRE tu respuesta con «VEREDICTO:».
+Explica en al menos 400 palabras cómo funciona el ingreso de un vehículo a ParqueFET: carné vigente, cupo de carros y motos, y cobro a visitantes.
+Explica en al menos 400 palabras cómo modelarías en una base de datos relacional los ingresos, las salidas y el cobro por hora o fracción de ParqueFET.
+/bye
+
+Si en la versión A la segunda respuesta todavía empieza por «VEREDICTO:», la primera
+respuesta fue corta y siguió en la ventana. En ese caso se baja la ventana a 384
+o se hace una tercera pregunta igual de larga, como indica la práctica 14B.

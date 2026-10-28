@@ -1,0 +1,15 @@
+[QUÉ QUIERO] Escribe la función puede_ingresar(vehiculo, ocupados) en Python 3.12. Autoriza o niega el ingreso de un vehículo al parqueadero en este momento.
+
+[PARA QUIÉN] La usará el backend FastAPI de ParqueFET. La van a mantener desarrolladores junior del equipo de servicios del campus.
+
+[CONTEXTO] ParqueFET controla el parqueadero del campus. El parámetro vehiculo tiene estos atributos: placa (str), tipo (str, solo "carro" o "moto"), registrado (bool), carne_vigente (bool), ya_hay_otro_vehiculo_del_carne (bool) y es_visitante (bool). El parámetro ocupados es un dict con las claves "carros" y "motos": cuántos vehículos de ese tipo ya están adentro. Las reglas de negocio van aparte, dentro de las etiquetas, para que no se confundan con la instrucción.
+
+<reglas>
+- Solo ingresan vehículos registrados a un carné vigente.
+- Capacidad: 120 carros y 300 motos. Con 120 carros no entra otro carro. Con 300 motos no entra otra moto.
+- Un carné solo puede tener un vehículo dentro a la vez.
+- Estudiantes y personal no pagan. Visitantes pagan $3.000 (carro) o $1.500 (moto) por hora o fracción.
+- Ningún vehículo puede permanecer más de 14 horas seguidas.
+</reglas>
+
+[FORMATO] Devuelve solo el código, con type hints y docstring. La función retorna una tupla (bool, str): True y "OK" si puede entrar; False y una frase corta con la regla que falló si no puede.

@@ -1,0 +1,29 @@
+Con los criterios de aceptación que están dentro de <criterios>, escribe una tabla Markdown de casos de prueba del pago de ParqueFET desde el celular.
+Columnas exactas: Caso | Entrada | Resultado esperado | Criterio que cubre
+No escribas nada antes de la tabla.
+
+En Resultado esperado escribe la cuenta, no solo la tarifa de una hora: horas cobradas × tarifa = total.
+Una hora empezada se cobra completa. Ejemplo de la cuenta, no lo copies como fila: 1 hora y 15 minutos son 2 horas; en moto, 2 × $1.500 = $3.000.
+La tabla anterior cobró $1.500 por 1 hora y 15 minutos en moto. Esa cuenta está mal. No la repitas.
+
+Tarifas: visitante en carro $3.000 por hora o fracción; visitante en moto $1.500 por hora o fracción; estudiante y personal $0.
+
+Antes de entregar, revisa que cada criterio tenga al menos un caso; si falta, agrégalo e indica cuál agregaste. Revisa también que cada monto coincida con la cuenta.
+
+<criterios>
+Dado que soy un visitante registrado con vehículo en carro
+Cuando decida pagar desde mi celular antes de salir
+Entonces el sistema me cobrará $3.000 por cada hora o fracción de mi estadía actual
+
+Dado que soy un visitante registrado con vehículo en moto
+Cuando decida pagar desde mi celular antes de salir
+Entonces el sistema me cobrará $1.500 por cada hora o fracción de mi estadía actual
+
+Dado que mi estadía supera una hora completa pero no llega a dos
+Cuando decida pagar desde mi celular antes de salir
+Entonces el sistema calculará y cobraré la tarifa completa de dos horas sin importar los minutos exactos
+
+Dado que soy estudiante o personal registrado con monto cero en mi cuenta
+Cuando decida pagar desde mi celular antes de salir
+Entonces el sistema me mostrará un mensaje indicando que no debo nada y me permitirá salir
+</criterios>

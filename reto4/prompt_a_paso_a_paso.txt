@@ -1,0 +1,13 @@
+Un carro con carné vigente llegó a ParqueFET cuando ya había 120 carros dentro, y la función lo dejó entrar. La capacidad es 120 carros.
+Evalúa la función paso a paso con estos datos: vehiculo.carne_vigente = True, vehiculo.tipo = "carro", ocupados["carros"] = 120.
+Para cada if, escribe la condición, su valor (True o False) y si la función retorna en ese punto.
+Después di qué línea tiene el error y escribe la corrección.
+
+<codigo>
+def puede_ingresar(vehiculo, ocupados):
+    if not vehiculo.carne_vigente:
+        return False
+    if vehiculo.tipo == "carro" and ocupados["carros"] > 120:
+        return False
+    return True
+</codigo>
